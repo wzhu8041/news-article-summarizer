@@ -17,8 +17,8 @@ This repo is organized around two workflows:
 │   ├── Summarize_UI.png
 │   └── Summarize_output.png
 ├── notebooks/
-│   ├── NewsSummarizationModel_Colab.pdf
-│   └── runwithlinks_Colab.pdf
+│   ├── NewsSummarizationModel.ipynb
+│   └── runwithlinks.ipynb
 ├── models/
 │   └── .gitkeep
 ├── requirements.txt
@@ -44,7 +44,7 @@ This repo is organized around two workflows:
 
 ## Quickstart (recommended: Google Colab)
 
-1. Open `notebooks/runwithlinks_Colab.ipynb` and follow the steps in order.
+1. Open `notebooks/runwithlinks.ipynb` and follow the steps in order.
 2. Provide the fine-tuned model artifact (e.g., a zipped checkpoint produced by the training notebook).
 3. Paste one or more URLs and run inference to generate summaries.
 
