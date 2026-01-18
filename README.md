@@ -9,6 +9,18 @@ This repo is organized around two workflows:
 
 ---
 
+## Why this matters
+
+The modern news cycle is *high-volume* and often *high-noise*. For students, analysts, and decision-makers, the bottleneck isn’t access to information—it’s turning lots of long-form articles into a quick, accurate understanding of **what happened**, **why it matters**, and **what to read next**. A link-to-summary workflow helps you:
+
+- **Triage faster:** skim key points before deciding what’s worth a full read  
+- **Reduce cognitive load:** convert dense articles into digestible summaries  
+- **Stay informed with less fatigue:** keep up with major developments without reading everything end-to-end  
+
+As a portfolio project, this demonstrates an end-to-end applied NLP pipeline: **data ingestion → text extraction → model inference → user-facing output**, which is a common pattern in real analytics and product work.
+
+---
+
 ## Repo structure
 
 ```
@@ -81,6 +93,19 @@ pip install -r requirements.txt
 ```
 
 > If you want GPU support locally, install the correct PyTorch build for your CUDA version (see PyTorch install instructions).
+
+---
+
+## How this could work in real-world deployment
+
+A production version of this project could be implemented as a small service with guardrails:
+
+- **Ingestion layer:** accept URLs, validate domains, respect `robots.txt`, and apply rate limiting/caching to avoid hammering publishers.
+- **Extraction reliability:** use a robust parsing pipeline (fallback extractors, readability cleaning, length checks).
+- **Summarization service:** package the model behind an API (FastAPI) or background job queue for longer articles; return results with latency targets.
+- **Trust & accuracy controls:** mitigate hallucinations by adding entity/number checks, highlighting uncertainty, or attaching “key sentences” pulled from the source.
+- **Publisher-friendly UX:** always preserve attribution and links; position summaries as a *reading aid* that drives users to original reporting rather than replacing it.
+- **Monitoring:** track summary length/latency, error rates, and periodic quality checks (factual consistency) as data sources and writing styles change over time.
 
 ---
 
