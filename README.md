@@ -42,7 +42,7 @@ This repo is organized around two workflows:
 
 ---
 
-## Quickstart (Google Colab or locally with Jupyter/VS Code)
+## Quickstart (Locally)
 
 1. Open `notebooks/runwithlinks.ipynb` and follow the steps in order.
 2. Provide the fine-tuned model artifact (e.g., a zipped checkpoint produced by the training notebook).
@@ -89,6 +89,7 @@ pip install -r requirements.txt
 - Some publishers block scraping, require JavaScript rendering, or are behind paywalls.
 - Generated summaries can be incomplete or occasionally incorrect—treat them as a reading aid, not ground truth.
 - Scraping using newspaper3k doesn't always grab the correct text from the article.
+- If running in Colab, Colab’s filesystem (/content) is temporary. When the runtime disconnects/restarts, your files can disappear.
 
 ---
 
