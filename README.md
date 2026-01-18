@@ -89,7 +89,7 @@ pip install -r requirements.txt
 - Some publishers block scraping, require JavaScript rendering, or are behind paywalls.
 - Generated summaries can be incomplete or occasionally incorrect—treat them as a reading aid, not ground truth.
 - Scraping using newspaper3k doesn't always grab the correct text from the article.
-- If running in Colab, Colab’s filesystem (/content) is temporary. When the runtime disconnects/restarts, your files can disappear.
+- If running in Colab, Colab’s filesystem (`/content`) is temporary. When the runtime disconnects/restarts, your files can disappear.
 
 ---
 
