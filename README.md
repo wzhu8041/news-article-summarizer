@@ -19,12 +19,9 @@ This repo is organized around two workflows:
 ├── notebooks/
 │   ├── NewsSummarizationModel_Colab.pdf
 │   └── runwithlinks_Colab.pdf
-├── src/
-│   └── placeholder.txt
 ├── models/
 │   └── .gitkeep
 ├── requirements.txt
-├── .gitignore
 └── LICENSE
 ```
 
